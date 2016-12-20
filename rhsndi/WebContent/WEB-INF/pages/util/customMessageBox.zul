@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Multiline Messagebox" language="xul/html"?>
+
+<window xmlns:n="native" border="none" width="400px" closable="true"
+	use="org.zkoss.zul.impl.MessageboxDlg">
+	<style>
+		.panel-container { margin-bottom:0; }
+
+		.panel-footer{ margin-bottom:0; margin-top: 10px; padding: 10px;
+		background-color:transparent; } .panel-body { padding:15px 0 0
+		0; } .panel-body .z-hbox { margin:0 15px; }
+	</style>
+	<div class="panel panel-primary panel-container">
+		<div class="panel-heading">
+			<label value="${arg.title}" />
+			<div sclass="close"
+				onClick="self.getParent().getParent().getParent().detach()">
+				<n:i class="z-icon-times"></n:i>
+			</div>
+		</div>
+		<div class="panel-body">
+			<hbox>
+				<div class="${arg.icon}" />
+				<div sclass="z-messagebox" width="100%">
+					<label multiline="true" value="${arg.message}"
+						sclass="word-wrap" width="100%" />
+				</div>
+				<div width="10px" />
+			</hbox>
+			<div class="modal-footer panel-footer">
+				<hbox style="margin-left:auto; margin-right:auto">
+					<button id="btn1" identity="${arg.OK}"
+						sclass="z-messagebox-btn btn-default btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.OK}" />
+					<button identity="${arg.CANCEL}"
+						sclass="z-messagebox-btn btn-danger btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.CANCEL}" />
+					<button identity="${arg.NO}"
+						sclass="z-messagebox-btn btn-primary btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.NO}" />
+					<button identity="${arg.YES}"
+						sclass="z-messagebox-btn btn-default btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.YES}" />
+					<button identity="${arg.RETRY}"
+						sclass="z-messagebox-btn btn-default btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.RETRY}" />
+					<button identity="${arg.ABORT}"
+						sclass="z-messagebox-btn btn-danger btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.ABORT}" />
+					<button identity="${arg.IGNORE}"
+						sclass="z-messagebox-btn btn-default btn-sm"
+						use="org.zkoss.zul.impl.MessageboxDlg$Button"
+						if="${!empty arg.IGNORE}" />
+				</hbox>
+			</div>
+		</div>
+	</div>
+</window>

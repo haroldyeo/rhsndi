@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<library-property>
+		<name>org.zkoss.theme.preferred</name>
+		<value>bootstrap</value> <!-- or silvertail, atlantic -->
+	</library-property>
+
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>bs</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Menupopup.mold</name>
+		<value>bs</value>
+	</library-property>
+	<!-- Zk EE components
+	<library-property>
+		<name>org.zkoss.zkmax.zul.Navbar.mold</name>
+		<value>bs</value>
+	</library-property>
+	 -->
+	<library-property>
+		<name>org.zkoss.zul.Paging.mold</name>
+		<value>bs</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Panel.mold</name>
+		<value>bs</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.util.label.web.charset</name>
+		<value>UTF-8</value>
+	</library-property>
+	
+	<library-property>
+		<name>org.zkoss.util.label.classpath.charset</name>
+		<value>UTF-8</value>
+	</library-property>
+
+	<system-config>
+		<label-location>/WEB-INF/i18n/labels.properties</label-location>
+		<label-location>/WEB-INF/i18n/messages.properties</label-location>
+	</system-config>
+	
+	<session-config>
+	    <session-timeout>0</session-timeout>
+	    <timer-keep-alive>false</timer-keep-alive>
+	</session-config>
+	
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the browser to reload the same URL -->
+	</device-config>
+</zk>
